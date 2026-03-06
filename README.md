@@ -1,2 +1,2 @@
-# CppProgamming
+# CppProgramming
 Studing C++
