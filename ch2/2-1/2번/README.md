@@ -30,4 +30,8 @@ cout << "차종 : 벤츠\n";
 ```cpp
 return 0;
 ```    
-- 0을 반환하고 메인함수 정상 종료  
+- 0을 반환하고 메인함수 정상 종료
+# 실행결과
+<img width="807" height="237" alt="스크린샷 2026-03-12 225859" src="https://github.com/user-attachments/assets/1ec38a8c-e8c2-4bd5-93ff-c2337d556024" />
+
+
