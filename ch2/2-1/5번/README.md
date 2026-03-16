@@ -30,3 +30,5 @@ cout << '\n';
 return 0;
 ```
 - 0을 반환하고 메인함수 종료
+# 실행결과
+- <img width="821" height="242" alt="스크린샷 2026-03-15 233518" src="https://github.com/user-attachments/assets/bd330a23-bc03-4a1b-b32d-b5db797b150b" />
