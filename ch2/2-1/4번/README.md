@@ -37,4 +37,5 @@ return 0;
 ```
 - 0을 반환하고 메인함수 종료
 # 실행결과
-- 
+- <img width="804" height="333" alt="스크린샷 2026-03-16 004530" src="https://github.com/user-attachments/assets/d9519365-8415-4a8a-9909-7478d544d20a" />
+
