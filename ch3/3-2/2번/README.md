@@ -67,4 +67,6 @@ return 0;
 }
 ```
 - 0을 반환하고 메인함수 종료
-  
+# 실행결과
+- <img width="808" height="163" alt="스크린샷 2026-03-19 220115" src="https://github.com/user-attachments/assets/783fcb46-efd2-4c34-97fd-8a50b9b96c61" />
+
