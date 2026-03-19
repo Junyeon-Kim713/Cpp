@@ -65,3 +65,5 @@ cout << "구의 부피는" << sph2.get_Volume() << endl;
 }
 ```
 - 0을 반환하고 메인함수 종료
+# 실행결과
+- <img width="804" height="169" alt="스크린샷 2026-03-19 222353" src="https://github.com/user-attachments/assets/f0cf4b40-d9f8-4b47-8e9a-b4a918b49229" />
