@@ -86,5 +86,6 @@ rect3.get_Coord();
 }
 ```
 - 0을 반환하고 메인함수 종료
+
 # 실행 결과
 - <img width="805" height="198" alt="스크린샷 2026-03-19 225042" src="https://github.com/user-attachments/assets/a1288fd9-0070-40f6-b968-7dc60ec25224" />
