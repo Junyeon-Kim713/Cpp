@@ -6,7 +6,7 @@
 ```cpp
 #include <cstring>
 ```
-- #include <cstring>
+- strcmp 등 c언어에서 문자열을 다루는 함수의 선언이 담긴 헤더파일 포함
 ```cpp
 using namespace std;
 ```
