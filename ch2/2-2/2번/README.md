@@ -56,3 +56,5 @@ void f(int x)
 cout << "x = " << x << "일때 y의 값은 " << x * x + 2 * x - 5 << "입니다." << endl;
 ```
 - cout 표준 출력 스트림 객체, << 스트림 삽입 연산자, endl 줄바꿈 및 버퍼 비움 수행
+# 실행결과
+- <img width="806" height="152" alt="image" src="https://github.com/user-attachments/assets/2b16cef3-c329-4466-a05e-18cd14f209b6" />
