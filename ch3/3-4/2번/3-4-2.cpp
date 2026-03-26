@@ -27,7 +27,10 @@ Circle::Circle(int r) {
 Circle::~Circle() {}
 void Circle::setR(int r)
 {
-	radius = r;
+	if (r <= 0)
+		cout << "양수를 입력하시오" << endl;
+	else
+		radius = r;
 }
 int Circle::getR()
 {

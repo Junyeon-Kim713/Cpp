@@ -1,4 +1,8 @@
-﻿#include <iostream>
+﻿// Title : 모든 멤버변수를 private로 선언한 Triangle 클래스
+// Author : 김준연
+// Date : 26,03.26
+
+#include <iostream>
 using namespace std;
 
 class Triangle {
@@ -18,8 +22,15 @@ public:
 Triangle::Triangle() : Triangle(1, 1) {}
 Triangle::Triangle(int w) : Triangle(w, 1) {}
 Triangle::Triangle(int w, int h) {
-	width = w;
-	height = h;
+	if (w <= 0 || h <= 0)
+	{
+		cout << "양수를 입력하시오. (자동으로 길이 1로 저장됨.)" << endl;
+		width = 1;
+		height = 1;
+	}
+	else
+		width = w;
+		height = h;
 }
 Triangle::~Triangle() {}
 void Triangle::setW(int w)

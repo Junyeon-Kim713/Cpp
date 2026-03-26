@@ -1,4 +1,8 @@
-﻿#include <iostream>
+﻿// Title : 모든 멤버변수를 private로 선언하고 잘못된 멤버변수 값 입력을 방지하는 Triangle 클래스
+// Author : 김준연
+// Date : 26.03.26
+
+#include <iostream>
 using namespace std;
 
 class Triangle {
