@@ -1,16 +1,8 @@
 # 소스코드 설명  
 ```cpp
-#include <iostream>
+#define _CRT_SECURE_NO_WARNINGS
 ```
-- cin, cout 등의 라이브러리 객체의 선언을 담은 헤더파일 포함
-```cpp
-using namespace std;
-```
-- std 이름공간에 선언된 모든 이름에 std 생략
-```cpp
-class Triangle {
-```
-- Triangle 클래스 선언# 소스코드 설명  
+- 문자열 함수 보안오류를 해결하는 문구 삽입  
 ```cpp
 #include <iostream>
 ```
@@ -20,77 +12,84 @@ using namespace std;
 ```
 - std 이름공간에 선언된 모든 이름에 std 생략
 ```cpp
-class Triangle {
+class Picture {
 ```
-- Triangle 클래스 선언
+- Picture 클래스 선언
 ```cpp
 private:
-	int width;
-	int height;
+	int width, height;
+	char place[20];
 ```
-- 접근지정자 private로 멤버변수 선언
+- 접근지정자 private로 멤버 변수 선언
 ```cpp
 public:
 ```
 - 접근지정자 public으로 지정, 이후에 나오는 멤버는 public
 ```cpp
-  Triangle() { width = 1; height = 1; }
-	Triangle(int w, int h) {
-		width = w; height = h;
-		cout << "폭 " << width << "높이 " << height << "인 삼각형 생성" << endl;
+	Picture() {
+		width = 5;
+		height = 7;
+		strcpy(place, "모름");
 	}
 ```
-- 생성자 정의, 자동 인라인함수로 정의, 기계어 수준에서 함수 호출문과 치환됨
+- 인자가 없는 생성자 자동 인라인함수로 정의
 ```cpp
-	~Triangle() {
-		cout << "폭 " << width << "높이 " << height << "인 삼각형 소멸" << endl;
+	Picture(int w, int h, const char* p) {
+		width = w;
+		height = h;
+		strcpy(place, p);
 	}
 ```
-- 소멸자 정의, 메인함수 종료와 함께 호출
+- 인자가 있는 생성자 정의, 매개변수의 값으로 멤버 변수 초기화, 읽기 전용 문자열 상수를 전달받으므로 const 추가
 ```cpp
-	void setWidth(int w) {
-		if (w <= 0)
-			cout << "양수를 입력하시오" << endl;
-		else
-			width = w;
-	}
+	~Picture() {}
 ```
-- 멤버함수 자동 인라인함수로 정의, 기계어 수준에서 함수 호출문과 치환됨, 양수값 들어오면 width에 저장
+- 소멸자 정의
 ```cpp
-void setHeight(int h) {
-		if (h <= 0)
-			cout << "양수를 입력하시오" << endl;
-		else
-			height = h;
-	}
-	double getArea() {
-		return 0.5 * width * height;
+	int getWidth() {
+		return width;
 	}
 ```
-- 멤버함수 자동 인라인함수로 정의, 기계어 수준에서 함수 호출문과 치환됨, 양수값 들어오면 height에 저장
+- getter 함수 자동 인라인 함수로 정의
+```cpp
+	int getHeight() {
+		return height;
+	}
+```
+- getter 함수 자동 인라인 함수로 정의
+```cpp
+	char* getPlace() {
+		return place;
+	}
+```
+- getter 함수 자동 인라인 함수로 정의, 문자열을 담은 배열의 첫번째 인덱스 주소를 반환하기에 반환형을 문자열 포인터형으로 지정
 ```cpp
 int main()
 ```
-- 메인함수 시작
+- 메인함수 정의
 ```cpp
-Triangle tri;
+Picture pic;
 ```
-- tri객체 생성, 인자가 없는 생성자 호출
+- pic 객체 생성
 ```cpp
-tri.setWidth(3);
+Picture mt(10, 14, "한라산");
 ```
-- setter 함수를 통한 변수값 변경
+- mt 객체 생성, 인자가 있는 객체 생성
 ```cpp
-tri.setHeight(5);
+cout << pic.getWidth() << "x" << pic.getHeight() << " " << pic.getPlace() << endl;
 ```
-- setter 함수를 통한 변수값 변경
+- pic 객체의 정보를 화면에 출력
 ```cpp
-cout << "삼각형의 면적은" << tri.getArea() << endl;
+cout << mt.getWidth() << "x" << mt.getHeight() << " " << mt.getPlace() << endl;
 ```
-- 삼각형의 면적을 화면에 출력, getter 함수를 피연산자로 사용
+- mt 객체의 정보를 화면에 출력
 ```cpp
 return 0;
 ```
 - 0을 반환하고 메인함수 종료
+# 실행결과  
+<img width="804" height="169" alt="스크린샷 2026-03-30 183313" src="https://github.com/user-attachments/assets/145ba6fb-24a3-4c7e-b800-9bc2370b1a89" />
+
+
 
 
