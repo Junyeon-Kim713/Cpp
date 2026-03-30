@@ -16,13 +16,13 @@ public:
 	void dump();
 	double getAvg();
 };
-inline Storage::Storage() {
+Storage::Storage() {
 	int i;
 	for (i = 0; i < 10; i++)
 		temp[i] = 0;
 	count = 0;
 }
-inline Storage::Storage(double t) {
+Storage::Storage(double t) {
 	if (t <= 0) {
 		cout << "양수를 입력하시오" << endl;
 		for (int i = 0; i < 10; i++)
@@ -35,8 +35,8 @@ inline Storage::Storage(double t) {
 		count = 1;
 	}
 }
-inline Storage::~Storage() {};
-inline void Storage::put(double t) {
+Storage::~Storage() {};
+void Storage::put(double t) {
 	if (count < 10 && t >= 0)
 	{
 		temp[count] = t;
@@ -45,7 +45,7 @@ inline void Storage::put(double t) {
 	else
 		cout << "저장소 꽉 참" << endl;
 }
-inline void Storage::dump() {
+void Storage::dump() {
 	int i;
 	for (i = 0; i < count; i++)
 	{
@@ -53,7 +53,7 @@ inline void Storage::dump() {
 	}
 	cout << endl;
 }
-inline double Storage::getAvg() {
+double Storage::getAvg() {
 	if (count == 0)
 		return 0;
 	double sum = 0.0;
