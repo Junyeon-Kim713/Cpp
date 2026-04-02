@@ -1,0 +1,131 @@
+# 소스코드 설명  
+```cpp
+#include <iostream>
+```
+- cin, cout 등의 라이브러리 객체의 선언을 담은 헤더파일 포함
+```cpp
+using namespace std;
+```
+- std 이름공간에 선언된 모든 이름에 std 생략
+```cpp
+class Triangle {
+```
+- Triangle 클래스 선언
+```cpp
+```cpp
+private:
+	int width;
+	int height;
+```
+- 접근 지정자 private로 멤버 변수 선언
+```cpp
+public:
+```
+- 접근 지정자 public으로 지정, 이후 나오는 멤버는 public
+```cpp
+  Triangle();
+	Triangle(int w);
+	Triangle(int w, int h);
+```
+- 생성자 선언
+```cpp
+	~Triangle() {
+		cout << "폭 " << this->width << "높이 " << this->height << "인 삼각형 소멸" << endl;
+	}
+```
+- 소멸자 선언 및 인라인 함수로 정의, this 포인터를 사용해 작성
+```cpp
+	void setWidth(int w);
+	void setHeight(int h);
+```
+- setter 함수 선언
+```cpp
+	double getArea() {
+		return 0.5 * this->width * this->height;
+	}
+
+};
+```
+- getter 함수 선언 및 인라인 함수로 정의, 클래스 선언부 종료 , this 포인터를 사용해 작성
+```cpp
+Triangle::Triangle()
+{
+	this->width = 1;
+	this->height = 1;
+}
+```
+- 인자가 없는 생성자 정의, this 포인터를 사용해 작성
+```cpp
+Triangle::Triangle(int w)
+{
+	if (w <= 0)
+	{
+		cout << "양수를 입력하시오" << endl;
+		this->width = w;
+		this->height = 1;
+	}
+	else
+	{
+		this->width = w;
+		this->height = 1;
+	}
+}
+```
+- 인자가 한개인 생성자 정의, this 포인터를 사용해 작성
+```cpp
+Triangle::Triangle(int w, int h)
+{
+	if (w <= 0 || h <= 0)
+	{
+		cout << "양수를 입력하시오" << endl;
+		this->width = w;
+		this->height = 1;
+	}
+	else
+	{
+		this->width = w;
+		this->height = h;
+	}
+}
+```
+- 인자가 모두 있는 생성자 정의, this 포인터를 사용해 작성
+```cpp
+void Triangle::setWidth(int w)
+{
+	if (w <= 0)
+		cout << "양수를 입력하시오" << endl;
+	else
+		this->width = w;
+}
+```
+- setter 함수 정의, this 포인터를 사용해 작성
+```cpp
+void Triangle::setHeight(int h) {
+	if (h <= 0)
+		cout << "양수를 입력하시오" << endl;
+	else
+		this->height = h;
+}
+```
+-  setter 함수 정의, this 포인터를 사용해 작성
+```cpp
+int main()
+```
+- 메인함수 시작
+```cpp
+  Triangle tri1; 
+  cout << "삼각형의 면적은 " << tri1.getArea() << endl;
+```
+- 인자가 없는 객체 생성 및 화면에 tri1 객체의 면적 출력
+```cpp
+  Triangle tri2(10); 
+  cout << "삼각형의 면적은 " << tri2.getArea() << endl;
+```
+- 인자가 한개인 객체 생성 및 화면에 tri2 객체의 면적 출력
+```cpp
+  Triangle tri3(10, 2); 
+  cout << "삼각형의 면적은 " << tri3.getArea() << endl;
+```
+- 인자가 모두 있는 객체 생성 및 화면에 tri3 객체의 면적 출력
+# 실행결과
+<img width="803" height="290" alt="스크린샷 2026-04-02 225823" src="https://github.com/user-attachments/assets/23050246-0bda-44e7-b886-6667822b2f4c" />
