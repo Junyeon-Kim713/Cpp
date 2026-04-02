@@ -127,5 +127,9 @@ int main()
   cout << "삼각형의 면적은 " << tri3.getArea() << endl;
 ```
 - 인자가 모두 있는 객체 생성 및 화면에 tri3 객체의 면적 출력
+```cpp
+	return 0;
+```
+- 0을 반환하고 메인함수 종료  
 # 실행결과
 <img width="803" height="290" alt="스크린샷 2026-04-02 225823" src="https://github.com/user-attachments/assets/23050246-0bda-44e7-b886-6667822b2f4c" />
