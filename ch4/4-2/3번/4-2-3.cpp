@@ -18,7 +18,7 @@ int main()
 		cin >> *(p + i);
 		sum += *(p + i);
 	}
-	delete(p);
+	delete [] p;
 	cout << "평균값은 " << sum / n << "입니다." << endl;
 	return 0;
 
