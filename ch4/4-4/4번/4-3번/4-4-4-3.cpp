@@ -32,7 +32,7 @@ Library::Library(string name, int size) : name(name), size(size <= 0 ? 5 : size)
 	{
 		cout << "크기는 양수만 가능. 자동으로 5로 초기화" << endl;
 	}
-	p = new Book[size];
+	p = new Book[this->size];
 }
 void Library::add(string name, int price)
 {
@@ -60,7 +60,7 @@ Book* Library::mostExpensive()
 	if (next == 0)
 		return NULL;
 	Book* max = p;
-	for (int i = 1; i <= next; i++)
+	for (int i = 1; i < next; i++)
 	{
 		if (max->getPrice() < p[i].getPrice())
 			max = p + i;
