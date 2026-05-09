@@ -18,11 +18,11 @@ int main() {
 }
 string GetMaxString(string* str)
 {
-	string max = str[0];
+	string* max = str;
 	for (int i = 1; i < 5; i++)
 	{
-		if (max < str[i])
-			max = str[i];
+		if (*max < str[i])
+			max = &str[i];
 	}
-	return max;
+	return *max;
 }
