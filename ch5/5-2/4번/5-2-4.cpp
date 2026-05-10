@@ -3,7 +3,6 @@
 // Date : 26.05.10
 
 #include <iostream>
-#include <string>
 using namespace std;
 void get_part(double num, int& refint_part, double& refdec_part);
 int main() {
