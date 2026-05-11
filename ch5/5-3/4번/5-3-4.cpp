@@ -1,3 +1,7 @@
+// Title : 참조 리턴을 이용해 연속해서 멤버변수를 호출하는 프로그램
+// Author : 김준연  
+// Date : 26.05.11
+
 #include <iostream>
 using namespace std;
 class Circle {
