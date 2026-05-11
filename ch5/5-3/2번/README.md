@@ -72,4 +72,5 @@ str[i] = toupper(str[i]);
 ```
 - 문자열의 각 인덱스의 문자를 대문자로 변환
 # 실행 결과  
-<img width="808" height="165" alt="스크린샷 2026-05-12 012153" src="https://github.com/user-attachments/assets/d60d047e-688f-4c2b-a9f2-54247238556a" />
+<img width="812" height="161" alt="스크린샷 2026-05-12 020742" src="https://github.com/user-attachments/assets/ea18f3e4-2a06-4fd4-b9f6-d1d001387a7c" />
+
