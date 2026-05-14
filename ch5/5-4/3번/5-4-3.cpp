@@ -18,19 +18,12 @@ public:
 	bool pop(int& n);
 };
 Mystack::Mystack() : Mystack(5) {}
-Mystack::Mystack(int size) {
-	if (size <= 0)
-	{
-		p = new int[5];
-		cout << "size 5인 스택 생성" << endl;
-		this->size = 5;
-	}
-	else
-	{
-		p = new int[size];
-		this->size = size;
-	}
-		
+Mystack::Mystack(int size) : size(size > 0 ? size : 5), tos(0) {
+    p = new int[this->size]; 
+    
+    if (size <= 0) {
+        cout << "size 5인 스택 생성" << endl;
+    }
 }
 Mystack::Mystack(const Mystack& src) {
 	p = new int[src.size];
