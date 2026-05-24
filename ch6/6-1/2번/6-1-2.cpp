@@ -1,3 +1,7 @@
+// Title : 정수, 실수, 문자열을 비교하는 함수를 함수 중복을 이용해 같은 이름의 함수로 선언한 프로그램  
+// Author : 김준연  
+// Date : 26.05.24
+
 #include <iostream>
 #include <string>
 using namespace std;
