@@ -7,7 +7,7 @@
 using namespace std;
 int big(int num1, int num2);
 double big(double num1, double num2);
-string big(string str1, string str2);
+const string& big(const string& str1, const string& str2);
 int main() {
 	int x = big(10, 20);
 	cout << "큰 정수값은 " << x << endl;
@@ -29,7 +29,7 @@ double big(double num1, double num2) {
 	else
 		return num2;
 }
-string big(string str1, string str2) {
+const string& big(const string& str1, const string& str2) {
 	if (str1 > str2)
 		return str1;
 	else
