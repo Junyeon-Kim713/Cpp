@@ -8,11 +8,7 @@ using namespace std;
 class Point3D {
 	int x, y, z;
 public:
-	Point3D(int x = 0, int y = 0, int z = 0) {
-		this->x = x;
-		this->y = y;
-		this->z = z;
-	}
+	Point3D(int x = 0, int y = 0, int z = 0) : x(x), y(y), z(z) {}
 	void show() {
 		cout << "3차원 점의 좌표는 (" << x << "," << y << ',' << z << ')' << endl;
 	}
