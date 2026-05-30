@@ -1,3 +1,7 @@
+// Title : 현재 생성된 객체의 개수를 나타내기 위해 tri_num을 static 멤버 변수로 선언하고 셍성된 객체의 개수를 확인하는 프로그램  
+// Author : 김준연
+// Date : 26.05.24
+
 #include <iostream>
 using namespace std;
 class Triangle {
