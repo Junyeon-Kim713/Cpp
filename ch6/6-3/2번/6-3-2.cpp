@@ -1,3 +1,7 @@
+// Title : 전역함수를 클래스 안에서 static 멤버 함수로 선언해 캡슐화를 구현한 프로그램  
+// Author : 김준연  
+// Date : 26.05.24
+
 #include <iostream>
 using namespace std;
 class MyMath {
