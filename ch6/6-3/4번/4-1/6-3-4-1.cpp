@@ -31,7 +31,7 @@ void Vector::show() {
 	show(this->size);
 }
 void Vector::show(int n) {
-	if (n <= 0)
+	if (n <= 0 || n > this->size)
 		cout << " 잘못된 숫자 입력" << endl;
 	else {
 		for (int i = 0; i < n; i++)
@@ -43,7 +43,7 @@ void Vector::show(int n) {
 }
 /* 디폴트 매개변수로 작성한 show 함수
 void Vector::show(int n) {
-	if(n = -1)
+	if(n == -1)
 		n = this->size;
 	for (int i = 0; i < n; i++)
 	{
