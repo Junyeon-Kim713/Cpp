@@ -28,7 +28,7 @@ int main() {
 	Complex a(3, 5), b(-10, -10);
 	a.show();
 	b.show();
-	b.operator+=(a);
+	b += a;
 	a.show();
 	b.show();
 	return 0;
